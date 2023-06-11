@@ -5,6 +5,9 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:jobhub/constants/app_constants.dart';
 import 'package:jobhub/views/common/app_bar.dart';
+import 'package:jobhub/views/common/custom_textfield.dart';
+import 'package:jobhub/views/common/exports.dart';
+import 'package:jobhub/views/common/height_spacer.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -27,20 +30,43 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(50),
-        child: CustomAppBar(
-          text: "Login",
-          child: GestureDetector(
-            onTap: () {
-              Get.back();
-            },
-            child: const Icon(CupertinoIcons.arrow_left),
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(50),
+          child: CustomAppBar(
+            text: "Login",
+            child: GestureDetector(
+              onTap: () {
+                Get.back();
+              },
+              child: const Icon(CupertinoIcons.arrow_left),
+            ),
           ),
         ),
-      ),
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20.w))
-    );
+        body: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20.w),
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: [
+              HeightSpacer(size: 50),
+              ReusableText(
+                  text: "Welcome Back!",
+                  style: appstyle(30, Color(kDark.value), FontWeight.w600)),
+              ReusableText(
+                  text: "Fill the details to login to your account",
+                  style: appstyle(16, Color(kDark.value), FontWeight.w600)),
+              HeightSpacer(size: 50),
+              CustomTextField(
+                controller: email,
+                keyboardType: TextInputType.emailAddress,
+                hintText: "Email",
+                validator: (email) {
+                  if (email!.isEmpty || !email.contains("@")) {
+                    return "Please enter a valid email";
+                  }
+                },
+              ),
+            ],
+          ),
+        ));
   }
 }
