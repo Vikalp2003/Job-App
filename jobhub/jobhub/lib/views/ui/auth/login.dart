@@ -62,6 +62,8 @@ class _LoginPageState extends State<LoginPage> {
                 validator: (email) {
                   if (email!.isEmpty || !email.contains("@")) {
                     return "Please enter a valid email";
+                  } else {
+                    return null;
                   }
                 },
               ),
