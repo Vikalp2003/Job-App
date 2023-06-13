@@ -12,7 +12,7 @@ class PageOne extends StatelessWidget {
     return Scaffold(
       body: Container(
         width: width,
-        height: hieght,
+        height: height,
         color: Color(kDarkPurple.value),
         child: Column(
           children: [

@@ -19,7 +19,7 @@ class PageThree extends StatelessWidget {
     return Scaffold(
       body: Container(
         width: width,
-        height: hieght,
+        height: height,
         color: Color(kLightBlue.value),
         child: Column(
           children: [
@@ -50,7 +50,7 @@ class PageThree extends StatelessWidget {
                   },
                   text: "Login",
                   width: width * 0.4,
-                  height: hieght * 0.06,
+                  height: height * 0.06,
                   color: Color(kLight.value),
                   color2: null,
                 ),
@@ -60,7 +60,7 @@ class PageThree extends StatelessWidget {
                   },
                   child: Container(
                     width: width * 0.4,
-                    height: hieght * 0.06,
+                    height: height * 0.06,
                     color: Color(kLight.value),
                     child: Center(
                         child: ReusableText(

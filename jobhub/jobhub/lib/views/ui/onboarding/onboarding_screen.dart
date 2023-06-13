@@ -43,7 +43,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             ],
           ),
           Positioned(
-              bottom: hieght * 0.09,
+              bottom: height * 0.09,
               left: 0,
               right: 0,
               child: Center(
