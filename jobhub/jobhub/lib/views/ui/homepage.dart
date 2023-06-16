@@ -7,6 +7,8 @@ import 'package:jobhub/views/common/app_style.dart';
 import 'package:jobhub/views/common/heading_widget.dart';
 import 'package:jobhub/views/common/height_spacer.dart';
 import 'package:jobhub/views/common/search.dart';
+import 'package:jobhub/views/common/vertical_tile.dart';
+import 'package:jobhub/views/ui/jobs/widgets/horizontal_tile.dart';
 import 'package:jobhub/views/ui/search/searchpage.dart';
 
 import '../common/drawer/drawer_widget.dart';
@@ -59,13 +61,31 @@ class _HomePageState extends State<HomePage> {
             HeightSpacer(size: 30),
             HeadingWidget(
               text: "Popular Jobs",
-              onTap: (){},
+              onTap: () {},
             ),
+            HeightSpacer(size: 15),
+            
+            SizedBox(
+              height: height * 0.28,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                  itemCount: 4,
+                  itemBuilder: (context, index) {
+                    return JobHorizontalTile(
+                      onTap: () {},
+                    );
+                  }),
+            ),
+
+            HeightSpacer(size: 20),
 
             HeadingWidget(
               text: "Recently Posted",
-              onTap: (){},
+              onTap: () {},
             ),
+
+            HeightSpacer(size: 20),
+            VerticalTile(),
           ],
         ),
       )),
