@@ -12,6 +12,7 @@ import 'package:jobhub/views/ui/jobs/widgets/horizontal_tile.dart';
 import 'package:jobhub/views/ui/search/searchpage.dart';
 
 import '../common/drawer/drawer_widget.dart';
+import 'jobs/job_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -64,26 +65,26 @@ class _HomePageState extends State<HomePage> {
               onTap: () {},
             ),
             HeightSpacer(size: 15),
-            
             SizedBox(
               height: height * 0.28,
               child: ListView.builder(
-                scrollDirection: Axis.horizontal,
+                  scrollDirection: Axis.horizontal,
                   itemCount: 4,
                   itemBuilder: (context, index) {
                     return JobHorizontalTile(
-                      onTap: () {},
+                      onTap: () {
+                        Get.to(() => JobPage(
+                         title: 'FaceBook', id: '12',
+                        ));
+                      },
                     );
                   }),
             ),
-
             HeightSpacer(size: 20),
-
             HeadingWidget(
               text: "Recently Posted",
               onTap: () {},
             ),
-
             HeightSpacer(size: 20),
             VerticalTile(),
           ],

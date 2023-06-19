@@ -32,7 +32,7 @@ class VerticalTile extends StatelessWidget {
                     CircleAvatar(
                       backgroundColor: Color(kLightGrey.value),
                       radius: 30,
-                      backgroundImage: AssetImage("assets/images/user.png"),
+                      backgroundImage: AssetImage("assets/images/dukaan.png"),
                       
                     ),
                     WidthSpacer(width: 10),
