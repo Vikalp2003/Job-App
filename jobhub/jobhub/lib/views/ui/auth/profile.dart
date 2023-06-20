@@ -1,5 +1,8 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:jobhub/constants/app_constants.dart';
+import 'package:jobhub/views/common/width_spacer.dart';
 
 import '../../common/app_bar.dart';
 import '../../common/drawer/drawer_widget.dart';
@@ -24,6 +27,45 @@ class _ProfilePageState extends State<ProfilePage> {
           ), 
           
         ),
+      ),
+      body: ListView(
+        padding: EdgeInsets.zero,
+        children: [
+          Container(
+            width: width,
+            height: height*0.12,
+            color: Color(kLight.value),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.all(Radius.circular(20)),
+                  child: CachedNetworkImage(
+                    width: 80.w,
+                    height: 100.h,
+                    imageUrl: ""
+                  ),
+                ),
+                WidthSpacer(width: 20),
+
+                Stack(
+                  children: [
+                    Container(
+                      width: width,
+                      height: height*0.12,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

@@ -142,11 +142,12 @@ class _JobPageState extends State<JobPage> {
               alignment: Alignment.bottomCenter,
               child: Padding(padding: EdgeInsets.only(bottom: 20.h),
                 child: CustomOutlineBtn(
+                  onTap: null,
                   color2: Color(kOrange.value),
                   width: width,
                   height: height*0.06,
                   text: "Apply Now",
-                  color: Color(kOrange.value),
+                  color: Color(kLight.value),
                 ),
               ),
             )
