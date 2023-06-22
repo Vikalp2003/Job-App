@@ -1,7 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:jobhub/constants/app_constants.dart';
+import 'package:jobhub/views/common/exports.dart';
 import 'package:jobhub/views/common/width_spacer.dart';
 
 import '../../common/app_bar.dart';
@@ -48,20 +50,19 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
                 WidthSpacer(width: 20),
 
-                Stack(
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
-                      width: width,
-                      height: height*0.12,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
+                    ReusableText(text: "John Doe", style: appstyle(20, Color(kDark.value), FontWeight.w600)),
+                          Row(
+                            children: [
+                              Icon(MaterialIcons.location_pin),
+
+                            ],
+                          ),
+                  ]
+                )
               ],
             ),
           ),
