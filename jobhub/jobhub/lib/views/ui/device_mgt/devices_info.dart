@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:jobhub/views/common/exports.dart';
+import 'package:jobhub/views/common/height_spacer.dart';
+import 'package:jobhub/views/ui/device_mgt/widgets/device_info.dart';
 
 import '../../common/app_bar.dart';
 import '../../common/drawer/drawer_widget.dart';
@@ -19,6 +22,29 @@ class DeviceManagement extends StatelessWidget {
           ), 
           
         ),
+      ),
+      body: SafeArea(
+        child: Stack(
+          children: [
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20.w),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  HeightSpacer(size: 50),
+                  Text("data",
+                    style: appstyle(16, Color(kDark.value), FontWeight.normal),
+
+                  ),
+
+                  HeightSpacer(size: 50),
+
+                  DevicesInfo(date: '', device: '', ipAdress: '', location: '', platform: '',),
+                ],
+              ),
+            )
+          ],
+        ),  
       ),
     );
   }
