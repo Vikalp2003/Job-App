@@ -35,9 +35,9 @@ class DevicesInfo extends StatelessWidget {
             ),
             CustomOutlineBtn(
               text: "Sign Out", 
-            color: Color(kOrange.value),
-            height: height*0.05,
-            width: width*0.3,
+              color: Color(kOrange.value),
+              height: height*0.05,
+              width: width*0.3,
             )
           ],
         )
